@@ -198,12 +198,12 @@ suites:
       state_top:
         base:
           '*':
-            - zabbix.agent.repo
             - zabbix.agent.conf
-            - zabbix.server.repo
-            - zabbix.server.conf
-            - zabbix.frontend.repo
+            - zabbix.pgsql.schema  # if 'sql_file' in settings
             - zabbix.frontend.conf
+            - zabbix.mysql.schema
+            - zabbix.proxy.conf
+            - zabbix.server.conf  # has x2, runs either one based on an `if`
       pillars:
         top.sls:
           base:
