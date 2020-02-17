@@ -13,17 +13,17 @@ version =
   case platform[:name]
   when 'debian'
     if os[:release].start_with?('10')
-      '1:4.4.1-1+buster'
+      '1:4.4.5-2+buster'
     elsif os[:release].start_with?('9')
-      '1:4.4.1-1+stretch'
+      '1:4.4.5-2+stretch'
     elsif os[:release].start_with?('8')
-      '1:4.4.1-1+jessie'
+      '1:4.4.5-2+jessie'
     end
   when 'ubuntu'
     if os[:release].start_with?('18')
-      '1:4.4.1-1+bionic'
+      '1:4.4.5-2+bionic'
     elsif os[:release].start_with?('16')
-      '1:4.4.1-1+xenial'
+      '1:4.4.5-2+xenial'
     end
   when 'centos'
     if os[:release].start_with?('8')

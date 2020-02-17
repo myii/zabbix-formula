@@ -4,7 +4,7 @@
 zabbix:
   # Overrides map.jinja
   lookup:
-    version_repo: '4.4'
+    version_repo: '4.5'
   #  agent:
   #    version: xxx
   #  frontend:
