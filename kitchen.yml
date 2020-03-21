@@ -160,12 +160,13 @@ suites:
       state_top:
         base:
           '*':
-            - zabbix.agent.repo
-            - zabbix.agent.conf
-            - zabbix.server.repo
-            - zabbix.server.conf
-            - zabbix.frontend.repo
-            - zabbix.frontend.conf
+            - zabbix.yaml_dump
+            # - zabbix.agent.repo
+            # - zabbix.agent.conf
+            # - zabbix.server.repo
+            # - zabbix.server.conf
+            # - zabbix.frontend.repo
+            # - zabbix.frontend.conf
       pillars:
         top.sls:
           base:
