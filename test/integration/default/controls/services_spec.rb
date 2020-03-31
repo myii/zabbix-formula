@@ -24,7 +24,13 @@ control 'zabbix service (running)' do
   impact 0.5
   title 'should be running'
 
-  services = %w[zabbix-agent zabbix-server]
+  services =
+    case platform[:name]
+    when 'fedora'
+      %w[zabbix-agent zabbix-server-mysql]
+    else
+      %w[zabbix-agent zabbix-server]
+    end
 
   services.each do |s|
     describe service(s) do
