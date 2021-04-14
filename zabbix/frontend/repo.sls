@@ -20,6 +20,10 @@ extend:
     pkgrepo:
       - require_in:
         - pkg: zabbix-frontend-php
+    {% elif salt['grains.get']('os_family') == 'Suse' -%}
+    pkgrepo:
+      - require_in:
+        - pkg: zabbix-frontend-php
   zabbix_frontend_non_supported_repo:
     pkgrepo:
       - require_in:

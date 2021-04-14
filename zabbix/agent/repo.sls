@@ -20,6 +20,10 @@ extend:
     pkgrepo:
       - require_in:
         - pkg: zabbix-agent
+    {% elif salt['grains.get']('os_family') == 'Suse' -%}
+    pkgrepo:
+      - require_in:
+        - pkg: zabbix-agent
   zabbix_agent_non_supported_repo:
     pkgrepo:
       - require_in:
