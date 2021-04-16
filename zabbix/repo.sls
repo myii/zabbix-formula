@@ -54,7 +54,7 @@
     - gpgkey: https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-79EA5ED4
 
 {%- elif salt['grains.get']('os_family') == 'Suse' %}
-zabbix_repo:
+{{ id_prefix }}_repo:
   pkgrepo.managed:
     - name: zabbix
     - humanname: "Zabbix Official Repository"
