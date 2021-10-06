@@ -8,6 +8,9 @@ driver:
   privileged: true
   run_command: /usr/lib/systemd/systemd
 
+# Using the commit title as a comment to guarantee change for new commit/push:
+# ci: test for upstream Salt regressions in '`'tiamat'`' instances (2021-W40a)
+
 provisioner:
   name: salt_solo
   log_level: debug
@@ -22,45 +25,45 @@ platforms:
   ## SALT `tiamat`
   - name: debian-11-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:debian-11
+      image: myii/salt-tiamat-py3:debian-11
       run_command: /lib/systemd/systemd
   - name: debian-10-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:debian-10
+      image: myii/salt-tiamat-py3:debian-10
       run_command: /lib/systemd/systemd
   - name: debian-9-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:debian-9
+      image: myii/salt-tiamat-py3:debian-9
       run_command: /lib/systemd/systemd
   - name: ubuntu-2004-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:ubuntu-20.04
+      image: myii/salt-tiamat-py3:ubuntu-20.04
       run_command: /lib/systemd/systemd
   - name: ubuntu-1804-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:ubuntu-18.04
+      image: myii/salt-tiamat-py3:ubuntu-18.04
       run_command: /lib/systemd/systemd
   - name: centos-8-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:centos-8
+      image: myii/salt-tiamat-py3:centos-8
   - name: centos-7-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:centos-7
+      image: myii/salt-tiamat-py3:centos-7
   - name: amazonlinux-2-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:amazonlinux-2
+      image: myii/salt-tiamat-py3:amazonlinux-2
   - name: oraclelinux-8-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:oraclelinux-8
+      image: myii/salt-tiamat-py3:oraclelinux-8
   - name: oraclelinux-7-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:oraclelinux-7
+      image: myii/salt-tiamat-py3:oraclelinux-7
   - name: almalinux-8-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:almalinux-8
+      image: myii/salt-tiamat-py3:almalinux-8
   - name: rockylinux-8-tiamat-py3
     driver:
-      image: saltimages/salt-tiamat-py3:rockylinux-8
+      image: myii/salt-tiamat-py3:rockylinux-8
 
   ## SALT `master`
   - name: debian-11-master-py3
