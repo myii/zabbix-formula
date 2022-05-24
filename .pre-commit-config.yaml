@@ -18,7 +18,7 @@ repos:
         additional_dependencies: ['@commitlint/config-conventional@8.3.4']
         always_run: true
   - repo: https://github.com/rubocop-hq/rubocop
-    rev: v1.25.1
+    rev: v1.29.1
     hooks:
       - id: rubocop
         name: Check Ruby files with rubocop
@@ -47,7 +47,7 @@ repos:
         name: Check Salt files using salt-lint
         files: ^.*\.(sls|jinja|j2|tmpl|tst)$
   - repo: https://github.com/myint/rstcheck
-    rev: 3f929574
+    rev: v6.0.0rc1
     hooks:
       - id: rstcheck
         name: Check reST files using rstcheck
@@ -63,3 +63,8 @@ repos:
                 docs/TOFS_pattern.rst|
             )$
         additional_dependencies: [pygments==2.9.0]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
